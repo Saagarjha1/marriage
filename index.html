@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Matchmaking App</title>
+  <link rel="stylesheet" href="./style.css">
+  <script>
+    // Function to check login status
+    function checkLogin() {
+      // Assuming login state is stored in sessionStorage
+      const isLoggedIn = sessionStorage.getItem('loggedIn'); // Change this as per your logic
+
+      // If not logged in, redirect to login page
+      if (!isLoggedIn) {
+        window.location.href = 'login.html';
+      } else {
+        // If logged in, redirect to matches page
+        window.location.href = 'matches.html';
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Welcome to the Matchmaking App</h1>
+      <nav>
+        <ul>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="javascript:void(0);" onclick="checkLogin()">Find Matches</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <p>Find your perfect match based on shared interests and location. Start now!</p>
+      <a href="javascript:void(0);" class="cta-button" onclick="checkLogin()">Find Matches</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Matchmaking App. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
